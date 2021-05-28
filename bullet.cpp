@@ -24,9 +24,11 @@ main(){
             cout<<"************************************************ | - |"<<endl;
             cout<<skeleton[0]<<skeleton[1]<<skeleton[2]<<skeleton[3]<<endl;
             cout<<"************************************************ | - |"<<endl;
+            cout<<skeleton[0]<<skeleton[1]<<skeleton[2]<<skeleton[3]<<endl;
+            cout<<"************************************************ | - |"<<endl;
             cont = cont + 1;
             if(cont == 49){
-                cout<<"|||| -> MISION COMPLETADA <- ||||";
+                cout<<"|||| -> MISION COMPLETADA <- ||||"<<endl;
                 finish = true;
             }
         }else{
