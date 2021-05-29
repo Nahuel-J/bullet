@@ -1,13 +1,14 @@
 #include <iostream>
-#include <conio.h>
 #include <windows.h>
 using namespace std;
+static bool s_finished = false;
 
-void time(int seconds){
-    while (true){
-        Sleep(1000); // 1 segundo.
-        seconds--;
-        system("cls");
-        cout<<"Segundos: "<<seconds;
+void *time(void *arg);
+void *time(void *arg){
+    int cont = 100;
+    while (!s_finished){
+      cout<<cont<<"s"<<endl;
+      cont--;   
+      Sleep(1000);
     }
 }
