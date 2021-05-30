@@ -2,7 +2,7 @@
 #include <thread>
 #include <chrono>
 #include <windows.h>
-#include "lib/esconu.h"
+#include "../../lib/esconu.h"
 using namespace std;
 
 static bool s_finished = false; //variable estatica encargada de cortar el timerGame
