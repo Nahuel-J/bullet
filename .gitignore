@@ -1,3 +1,5 @@
 .vscode
-bullet.exe
 lib
+Bullet.exe
+main.exe
+temp.cpp
