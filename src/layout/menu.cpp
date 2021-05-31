@@ -42,9 +42,11 @@ void menu_partida();
 void menu_puntos();
 void menu_dificultad();
 void cancion_1();
+void loader();
  
 int main()
 {
+	loader();
 	cancion_1();
    menu_principal();
    return 0;
@@ -210,15 +212,15 @@ int menu(const char titulo[], const char *opciones[], int numopciones)
  
    do {
       system("cls");
-      system("color 1e");
-      gotoxy(5, 3 + opcionSeleccionada); cout << "==>" << endl;
+      system("color 0a");
+      gotoxy(40, 6 + opcionSeleccionada); cout << "==>" << endl;
  
       // Imprime el título del menú
-      gotoxy(15, 2); cout << titulo;
+      gotoxy(47, 8); cout << titulo;
  
       // Imprime las opciones del menú
       for (int i = 0; i < numopciones; ++i) {
-         gotoxy(10, 4 + i); cout << i + 1 << ") " << opciones[i];
+         gotoxy(47, 7 + i); cout << i + 1 << ") " << opciones[i];
       }
  
       // Solo permite que se ingrese ARRIBA, ABAJO o ENTER
@@ -321,5 +323,32 @@ void cancion_1()
     Beep(210,100);
     usleep(100); 
     Beep(190,700);
+}
+
+void loader(){
+	char caracter = 254;
+	char caracter2 = 176;
+	system("color 0a");
+	gotoxy (50,10);
+	cout<<" CROMOSOMAS"<<endl;
+	gotoxy (37,12);
+	cout<<"¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"<<endl;
+	gotoxy (37,14);
+	cout<<"¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"<<endl;
+	
+	for (int i=38;i<74;i++){
+		system("color 02");
+		system("color 06");
+		system("color 09");
+		gotoxy (i,13);
+		cout<<caracter;
+		
+		for (int j=1;j<3;j++){
+			for (int k=1;k<3;k++){
+				gotoxy(k,24);
+			}
+		}
+	}
+
 }
 

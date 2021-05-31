@@ -15,6 +15,7 @@ int gotoxy(USHORT x,USHORT y) {
 
 int main(){
 	
+	system("color 02");
 	gotoxy (35,5);
 	cout<<" BARRA DE CARGA "<<endl;
 	
@@ -22,9 +23,11 @@ int main(){
 	cout<<" CARGANDO..."<<endl;
 	
 	for (int i=5;i<70;i++){
-		system("color 1e");
-		system("color 2d");
-		system("color 3c");
+		system("color 02");
+		system("color 0a");
+		system("color 07");
+		system("color 02");
+		system("color 07");
 		gotoxy (i,13);
 		cout<<"#";
 		gotoxy (i,14);
@@ -35,6 +38,7 @@ int main(){
 				gotoxy(k,24);
 			}
 		}
+		
 	}
 	return 0;
 }
