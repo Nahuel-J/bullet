@@ -2,16 +2,10 @@
 #include <thread>
 #include <chrono>
 #include <windows.h>
-#include "../../lib/esconu.h"
 using namespace std;
 
 static bool s_finished = false; //variable estatica encargada de cortar el timerGame
 static int s_time = 0; // variable estatica encargada del
-
-void timerGame();
-void stop();
-void abstractTyping(string *);
-
 
 void timerGame(){
   //manejo de error al setear el timer.
@@ -29,17 +23,17 @@ void timerGame(){
 
 //CAMBIAR NOMBRE DE STOP, NO CUMPLE CON UNA DESCRIPCION CERTERA.
 void stop(){
-    string type;
-    const string compareName = "alejo";
-    cout<<"Inserte el nombre a continuacion: "<<compareName<<endl;
-    abstractTyping(&type);
-    if(type == compareName){
-      s_finished = true;
-      cout<<"Finished, winner";
-    }else{
-      s_finished = true;
-      cout<<"GAME OVER";
-    };
+  string type;
+  const string compareName = "alejo";
+  cout<<"Inserte el nombre a continuacion: "<<compareName<<endl;
+  abstractTyping(&type);
+  if(type == compareName){
+    s_finished = true;
+    cout<<"Finished, winner";
+  }else{
+    s_finished = true;
+    cout<<"GAME OVER";
+  };
 }
 
 void abstractTyping(string *type){
