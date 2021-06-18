@@ -3,10 +3,12 @@
 #include <string>
 #include <windows.h>
 #include <unistd.h>
+//--------------------//
 #include "./controllers/stats.cpp"
 #include "./controllers/actions.cpp"
 #include "./layout/menu.cpp"
-
+#include "./layout/skeleton.cpp"
+//--------------------//
 using namespace std;
 
 bool start;
