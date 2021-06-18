@@ -5,18 +5,18 @@ using namespace std;
 
 //Trae el nombre disponible en el sistema. No funciona con relaciones.
 string getName(){
-    return s_name;
+    return stateName;
 }
 int getScore(){
-    return s_score;
+    return stateScore;
 }
 
 //Asigna el nombre que quedará latente en el sistema.
 void setName(string name){
-    int score = s_score;
+    int score = stateScore;
     saveUser(name,score);
 }
 void setScore(int score){
-    string name = s_name;
+    string name = stateName;
     saveUser(name, score);
 }

@@ -4,12 +4,14 @@
 #include <iostream>
 #include <windows.h>
 #include <unistd.h>
+#include "../../lib/esconu.h"
 #define ARRIBA 'w'
 #define ABAJO 's'
 #define ENTER 13
 
 using namespace std;
  
+
 char getch2 ()
 {
    char c=0;
@@ -30,10 +32,22 @@ char getch2 ()
    return c;
 }
  
-int gotoxy(USHORT x,USHORT y) {
-   COORD cp = {x,y};
-   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cp);
+void gotoxy(int x,int y) {
+    COORD coordenada;
+
+    if (x < 1 || x > 80 || y < 1 || y > 24)
+    {
+        x = 1;
+        y = 1;
+    }
+
+    coordenada.X = x;
+    coordenada.Y = y;
+    SetConsoleCursorPosition (GetStdHandle ( STD_OUTPUT_HANDLE),
+                              coordenada);
+   
  }
+
  
  
 int menu(const char titulo[], const char *opciones[], int n);
@@ -45,14 +59,11 @@ void cancion_1();
 void loader();
 void write();
 
- 
 void menu_principal()
 {
    bool repite = true;
    int opcion;   
    
-   
- 	
    // Titulo del men� y nombres de las opciones
    const char *titulo = "MENU PRINCIPAL";
    const char *opciones[] = {"NUEVA PARTIDA","TABLA DE PUNTOS","DIFICULTAD","SALIR"};
@@ -332,9 +343,9 @@ void loader(){
 	gotoxy (50,16);
 	cout<<" CARGANDO"<<endl;
 	gotoxy (37,18);
-	cout<<"��������������������������������������"<<endl;
+	cout<<"============================================="<<endl;
 	gotoxy (37,20);
-	cout<<"��������������������������������������"<<endl;
+	cout<<"============================================="<<endl;
 	
 	for (int j=2; j<117; j++){ //cuadro
 		gotoxy (j,3); cout<<caracter1;

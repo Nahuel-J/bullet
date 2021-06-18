@@ -38,7 +38,7 @@ void startRunner(){
     // setear cambios al ganar usuario.
   }else{
     s_finished = true;
-    // setear cambios al ganar usuario.
+    // setear cambios al perder el usuario.
   };
 }
 
