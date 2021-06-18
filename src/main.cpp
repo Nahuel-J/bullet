@@ -7,10 +7,12 @@ using namespace std;
 //testing
 int main(){
     cout<<"Listo para comenzar? Presiona enter..."<<endl;
-    thread first(timerGame);
     cin.get();
-    system("cls");
+    //se crea el segundo hilo utilizando el procedimiento timer.
+    thread first(timerGame);
+    //procedimiento corriendo en el hilo principal
     stop();
+    //une los hilos una vez termina su ejecución.
     first.join();
     return 0;
 }
