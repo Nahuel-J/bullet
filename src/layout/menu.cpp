@@ -10,6 +10,18 @@
 
 using namespace std;
  
+ 
+int menu(const char titulo[], const char *opciones[], int n);
+void menu_principal();
+void menu_partida();
+void menu_puntos();
+void menu_dificultad();
+void cancion_1();
+void loader();
+void write();
+ 
+ 
+ 
 int main(){
    //chequear errores
    loader();
@@ -44,14 +56,7 @@ int gotoxy(USHORT x,USHORT y) {
  }
  
  
-int menu(const char titulo[], const char *opciones[], int n);
-void menu_principal();
-void menu_partida();
-void menu_puntos();
-void menu_dificultad();
-void cancion_1();
-void loader();
-void write();
+
  
 void menu_principal()
 {
@@ -110,12 +115,16 @@ void menu_partida()
       system("cls");
       switch (opcion) {
          case 1:
+         	system("color 0a");
+			gotoxy (50,16);
             cout << "numero1 = ";
             system("pause>nul");
             break;
  
  
          case 2:
+         	system("color 0a");
+			gotoxy (50,16);
             cout << "numero1 = ";
             system("pause>nul");
             break;
@@ -143,12 +152,16 @@ void menu_puntos()
       system("cls");
       switch (opcion) {
          case 1:
+         	system("color 0a");
+			gotoxy (50,16);
             cout << "numero1 = ";
             system("pause>nul");
             break;
  
  
          case 2:
+         	system("color 0a");
+			gotoxy (50,16);
             cout << "numero1 = ";
             system("pause>nul");
             break;
@@ -176,17 +189,23 @@ void menu_dificultad()
       system("cls");
       switch (opcion) {
          case 1:
+         	system("color 0a");
+			gotoxy (40,16);
             cout << " LA DIFICULTAD FUE CAMBIADA A FACIL ";
             system("pause>nul");
             break;
  
- 
+
          case 2:
+         	system("color 0a");
+			gotoxy (40,16);
             cout << " LA DIFICULTAD FUE CAMBIADA A MEDIO ";
             system("pause>nul");
             break;
             
  		 case 3:
+ 		 	system("color 0a");
+			gotoxy (40,16);
             cout << " LA DIFICULTAD FUE CAMBIADA A DIFICIL ";
             system("pause>nul");
             break;
@@ -337,9 +356,9 @@ void loader(){
 	gotoxy (50,16);
 	cout<<" CARGANDO"<<endl;
 	gotoxy (37,18);
-	cout<<"��������������������������������������"<<endl;
+	cout<<"======================================"<<endl;
 	gotoxy (37,20);
-	cout<<"��������������������������������������"<<endl;
+	cout<<"======================================"<<endl;
 	
 	for (int j=2; j<117; j++){ //cuadro
 		gotoxy (j,3); cout<<caracter1;
