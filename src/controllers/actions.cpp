@@ -35,10 +35,10 @@ void startRunner(){
   abstractTyping(&type);
   if(type == compareName){
     s_finished = true;
-    cout<<"Finished, winner";
+    // setear cambios al ganar usuario.
   }else{
     s_finished = true;
-    cout<<"GAME OVER";
+    // setear cambios al ganar usuario.
   };
 }
 
