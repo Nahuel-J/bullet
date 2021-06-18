@@ -10,6 +10,14 @@
 
 using namespace std;
  
+int main(){
+   //chequear errores
+   loader();
+	cancion_1();
+   menu_principal();
+   return 0;
+}
+
 char getch2 ()
 {
    char c=0;
@@ -44,15 +52,12 @@ void menu_dificultad();
 void cancion_1();
 void loader();
 void write();
-
  
 void menu_principal()
 {
    bool repite = true;
    int opcion;   
    
-   
- 	
    // Titulo del men� y nombres de las opciones
    const char *titulo = "MENU PRINCIPAL";
    const char *opciones[] = {"NUEVA PARTIDA","TABLA DE PUNTOS","DIFICULTAD","SALIR"};

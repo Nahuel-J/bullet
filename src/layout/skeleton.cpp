@@ -4,7 +4,8 @@
 #include <stdio.h>
 using namespace std;
 
-main(){
+void renderMap(){
+
     string move = " ";
     int cont = 0;
     string skeleton[4];
@@ -36,6 +37,5 @@ main(){
         }
         
     } while (!finish);
-                                                                 
-    
+
 }

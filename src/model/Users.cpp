@@ -3,8 +3,8 @@
 #include <fstream>
 using namespace std;
 
-string s_name;
-int s_score;
+string stateName;
+int stateScore;
 
 void saveUser(string name, int score){
     ofstream file;
@@ -13,8 +13,8 @@ void saveUser(string name, int score){
     if(file.fail()){
         cout<<"[model]: Error al guardar datos";
     }else{
-        s_name = name;
-        s_score = score;
+        stateName = name;
+        stateScore = score;
         file<<name<<" "<<score;
     }
 
