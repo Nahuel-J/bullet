@@ -11,6 +11,19 @@
 
 using namespace std;
  
+void menu_principal();
+void menu_partida();
+void menu_puntos();
+void menu_dificultad();
+int menu(const char titulo[], const char *opciones[], int numopciones);
+void cancion_1();
+void loader();
+void write ();
+
+int main (){
+	loader();
+	menu_principal();
+}
 
 char getch2 ()
 {
@@ -48,8 +61,6 @@ void gotoxy(int x,int y) {
    
  }
 
- 
- 
 
 void menu_principal()
 {
@@ -349,19 +360,10 @@ void loader(){
 	gotoxy (50,16);
 	cout<<" CARGANDO"<<endl;
 	gotoxy (37,18);
-	cout<<"============================================="<<endl;
+	cout<<"======================================"<<endl;
 	gotoxy (37,20);
-	cout<<"============================================="<<endl;
+	cout<<"======================================"<<endl;
 	
-	for (int j=2; j<117; j++){ //cuadro
-		gotoxy (j,3); cout<<caracter1;
-		gotoxy (j,30); cout<<caracter1;
-	}
-	
-	for (int k=4; k<30; k++){ //cuadro
-		gotoxy (2,k); cout<<caracter3;
-		gotoxy (116,k); cout<<caracter3;
-	}
 	
 	for (int i=38;i<74;i++){
 		system("color 02");
@@ -381,19 +383,20 @@ void loader(){
 
 void write (){
 	
+	/*
 	char caracter1= 205;
 	char caracter3 = 186;
 	
-	for (int j=2; j<117; j++){ //cuadro
+	for (int j=2; j<150; j++){ //cuadro
 		gotoxy (j,3); cout<<caracter1;
 		gotoxy (j,30); cout<<caracter1;
 	}
 	
-	for (int k=4; k<30; k++){ //cuadro
+	for (int k=4; k<70; k++){ //cuadro
 		gotoxy (2,k); cout<<caracter3;
 		gotoxy (116,k); cout<<caracter3;
 	}
-	
+	*/
 		gotoxy (20,6);
 	  cout<<" M7MMMMMq.    M7MMF'  M7MF `7MN.  M7MF'`7MN.  M7MF'` 7MMMMMYMM   M7MMMMMMq."<<endl;
 	 	 gotoxy (20,7);
